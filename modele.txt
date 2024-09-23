@@ -1,0 +1,33 @@
+Modèle de relation d'entité :
+    Gymnase
+        -ID (PK)
+        -Nom
+        -Adresse
+        -Numéro de téléphone
+        
+    Membre
+        -ID (PK)     
+        -Nom de famille
+        -Prénom
+        -Adresse
+        -Date de naissance
+        -Sexe
+        -Gymnase_ID (FK)
+
+    Session
+        -ID (PK)
+        -Type de sport
+        -Horaire
+        -Max_Membres
+
+    Entraîneur
+        -ID (PK)
+        -Nom de famille
+        -Prénom
+        -Âge
+        -Spécialité
+        -Session_ID (FK)
+
+    Membre_Session (table d'association pour la relation N entre Membre et Session)
+        -Membre_ID (PK, FK)
+        -Session_ID (PK, FK)
